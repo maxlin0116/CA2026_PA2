@@ -1,0 +1,46 @@
+| Addr | Machine Code | Assembly                                                      |
+| ---- | ------------ | ------------------------------------------------------------- |
+| 0x00 |   0x40000A13 | addi  x20, x0, 1024  # xB = data base                         |
+| 0x04 |   0x00010337 | lui   x6, 0x10  # --- setup: seed memory pool, init registers |
+| 0x08 |   0xFFF30313 | addi  x6, x6, -1                                              |
+| 0x0C |   0xD66A2223 | sw    x6, -668(x20)                                           |
+| 0x10 |   0x01F00D93 | addi  x27, x0, 31                                             |
+| 0x14 |   0xDDBA2C23 | sw    x27, -552(x20)                                          |
+| 0x18 |   0x1E264437 | lui   x8, 0x1E264                                             |
+| 0x1C |   0x49540413 | addi  x8, x8, 1173                                            |
+| 0x20 |   0xCA8A2823 | sw    x8, -848(x20)                                           |
+| 0x24 |   0x80000BB7 | lui   x23, 0x80000                                            |
+| 0x28 |   0x50758437 | lui   x8, 0x50758                                             |
+| 0x2C |   0x82C40413 | addi  x8, x8, -2004                                           |
+| 0x30 |   0x0277CCB7 | lui   x25, 0x277C                                             |
+| 0x34 |   0x343C8C93 | addi  x25, x25, 835                                           |
+| 0x38 |   0x00100F13 | addi  x30, x0, 1                                              |
+| 0x3C |   0xD64A2303 | lw    x6, -668(x20)  # --- body  [load]                       |
+| 0x40 |   0x9B758437 | lui   x8, 0x9B758  # [li]                                     |
+| 0x44 |   0xD5140413 | addi  x8, x8, -687                                            |
+| 0x48 |   0xCB0A0613 | addi  x12, x20, -848  # [load]                                |
+| 0x4C |   0x00062783 | lw    x15, 0(x12)                                             |
+| 0x50 |   0x01F7DB93 | srli  x23, x15, 31  # [alu]                                   |
+| 0x54 |   0xE4000F13 | addi  x30, x0, -448  # [addr]                                 |
+| 0x58 |   0x01EA01B3 | add   x3, x20, x30                                            |
+| 0x5C |   0x4371AE23 | sw    x23, 1084(x3)                                           |
+| 0x60 |   0x7FFF2913 | slti  x18, x30, 2047  # [alu]                                 |
+| 0x64 |   0x00392BB3 | slt   x23, x18, x3  # [alu]                                   |
+| 0x68 |   0x00001637 | lui   x12, 0x1  # [li]                                        |
+| 0x6C |   0x80060613 | addi  x12, x12, -2048                                         |
+| 0x70 |   0x403A2623 | sw    x3, 1036(x20)  # --- signature: dump registers          |
+| 0x74 |   0x406A2C23 | sw    x6, 1048(x20)                                           |
+| 0x78 |   0x428A2023 | sw    x8, 1056(x20)                                           |
+| 0x7C |   0x42CA2823 | sw    x12, 1072(x20)                                          |
+| 0x80 |   0x42FA2E23 | sw    x15, 1084(x20)                                          |
+| 0x84 |   0x452A2423 | sw    x18, 1096(x20)                                          |
+| 0x88 |   0x454A2823 | sw    x20, 1104(x20)                                          |
+| 0x8C |   0x457A2E23 | sw    x23, 1116(x20)                                          |
+| 0x90 |   0x479A2223 | sw    x25, 1124(x20)                                          |
+| 0x94 |   0x47BA2623 | sw    x27, 1132(x20)                                          |
+| 0x98 |   0x47EA2C23 | sw    x30, 1144(x20)                                          |
+| 0x9C |   0x00000013 | nop                                                           |
+| 0xA0 |   0x00000013 | nop                                                           |
+| 0xA4 |   0x00000013 | nop                                                           |
+| 0xA8 |   0x00000013 | nop                                                           |
+| 0xAC |   0x00000000 | (EOF)                                                         |

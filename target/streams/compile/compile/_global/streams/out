@@ -1,0 +1,76 @@
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:43:43: not found: value OP_SUB[0m
+[0m[[0m[31merror[0m] [0m[0m                        ctrl.ctrlALUOp := OP_SUB[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:45:43: not found: value OP_MUL[0m
+[0m[[0m[31merror[0m] [0m[0m                        ctrl.ctrlALUOp := OP_MUL[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:47:43: not found: value OP_ADD[0m
+[0m[[0m[31merror[0m] [0m[0m                        ctrl.ctrlALUOp := OP_ADD[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:50:50: not found: value OP_SLL[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b001".U) { ctrl.ctrlALUOp := OP_SLL }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:51:50: not found: value OP_SLT[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b010".U) { ctrl.ctrlALUOp := OP_SLT }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:52:50: not found: value OP_XOR[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b100".U) { ctrl.ctrlALUOp := OP_XOR }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:55:43: not found: value OP_SRA[0m
+[0m[[0m[31merror[0m] [0m[0m                        ctrl.ctrlALUOp := OP_SRA[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:57:43: not found: value OP_SRL[0m
+[0m[[0m[31merror[0m] [0m[0m                        ctrl.ctrlALUOp := OP_SRL[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:60:50: not found: value OP_OR[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b110".U) { ctrl.ctrlALUOp := OP_OR }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:61:50: not found: value OP_AND[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b111".U) { ctrl.ctrlALUOp := OP_AND }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:70:50: not found: value OP_ADD[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b000".U) { ctrl.ctrlALUOp := OP_ADD }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:71:50: not found: value OP_SLT[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b010".U) { ctrl.ctrlALUOp := OP_SLT }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:72:50: not found: value OP_SLL[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b001".U) { ctrl.ctrlALUOp := OP_SLL }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:75:43: not found: value OP_SRA[0m
+[0m[[0m[31merror[0m] [0m[0m                        ctrl.ctrlALUOp := OP_SRA[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:77:43: not found: value OP_SRL[0m
+[0m[[0m[31merror[0m] [0m[0m                        ctrl.ctrlALUOp := OP_SRL[0m
+[0m[[0m[31merror[0m] [0m[0m                                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:88:34: not found: value OP_ADD[0m
+[0m[[0m[31merror[0m] [0m[0m            ctrl.ctrlALUOp    := OP_ADD  // Address calculation: rs1 + imm[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:95:34: not found: value OP_ADD[0m
+[0m[[0m[31merror[0m] [0m[0m            ctrl.ctrlALUOp    := OP_ADD  // Address calculation: rs1 + imm[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:104:50: not found: value OP_BEQ[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b000".U) { ctrl.ctrlALUOp := OP_BEQ }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:105:50: not found: value OP_BNE[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b001".U) { ctrl.ctrlALUOp := OP_BNE }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:106:50: not found: value OP_BLT[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b100".U) { ctrl.ctrlALUOp := OP_BLT }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:107:50: not found: value OP_BGE[0m
+[0m[[0m[31merror[0m] [0m[0m                is("b101".U) { ctrl.ctrlALUOp := OP_BGE }[0m
+[0m[[0m[31merror[0m] [0m[0m                                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:114:34: not found: value OP_JAL[0m
+[0m[[0m[31merror[0m] [0m[0m            ctrl.ctrlALUOp    := OP_JAL  // Saves PC + 4 to rd[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:121:34: not found: value OP_JALR[0m
+[0m[[0m[31merror[0m] [0m[0m            ctrl.ctrlALUOp    := OP_JALR // Saves PC + 4 to rd, jumps to (rs1 + imm) & ~1[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:127:34: not found: value OP_LUI[0m
+[0m[[0m[31merror[0m] [0m[0m            ctrl.ctrlALUOp    := OP_LUI  // Result is imm << 12[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/Decoder.scala:133:34: not found: value OP_AUIPC[0m
+[0m[[0m[31merror[0m] [0m[0m            ctrl.ctrlALUOp    := OP_AUIPC // Result is PC + (imm << 12)[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m25 errors found[0m

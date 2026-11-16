@@ -1,0 +1,65 @@
+| Addr | Machine Code | Assembly                                            |
+| ---- | ------------ | --------------------------------------------------- |
+| 0x00 |   0x40000493 | addi  x9, x0, 1024  # xB = data base                |
+| 0x04 |   0x00000013 | nop  # --- setup: seed memory pool, init registers  |
+| 0x08 |   0x00000013 | nop                                                 |
+| 0x0C |   0x00000013 | nop                                                 |
+| 0x10 |   0x24A4DDB7 | lui   x27, 0x24A4D                                  |
+| 0x14 |   0x800000B7 | lui   x1, 0x80000                                   |
+| 0x18 |   0x00200213 | addi  x4, x0, 2                                     |
+| 0x1C |   0x00000013 | nop                                                 |
+| 0x20 |   0xE9CD8D93 | addi  x27, x27, -356                                |
+| 0x24 |   0x00000013 | nop                                                 |
+| 0x28 |   0x00000013 | nop                                                 |
+| 0x2C |   0x00000013 | nop                                                 |
+| 0x30 |   0xC9B4AA23 | sw    x27, -876(x9)                                 |
+| 0x34 |   0xC214A823 | sw    x1, -976(x9)                                  |
+| 0x38 |   0xCE44A423 | sw    x4, -792(x9)                                  |
+| 0x3C |   0x00000013 | nop                                                 |
+| 0x40 |   0x01F00A93 | addi  x21, x0, 31                                   |
+| 0x44 |   0xFE100E93 | addi  x29, x0, -31                                  |
+| 0x48 |   0x02000F93 | addi  x31, x0, 32                                   |
+| 0x4C |   0x850BC6B7 | lui   x13, 0x850BC                                  |
+| 0x50 |   0x00000013 | nop                                                 |
+| 0x54 |   0x00000013 | nop                                                 |
+| 0x58 |   0x00000013 | nop                                                 |
+| 0x5C |   0x23E68693 | addi  x13, x13, 574                                 |
+| 0x60 |   0x00000013 | nop                                                 |
+| 0x64 |   0x00000013 | nop                                                 |
+| 0x68 |   0x00000013 | nop                                                 |
+| 0x6C |   0x41F05B33 | sra   x22, x0, x31  # --- body  [alu]               |
+| 0x70 |   0xCB200993 | addi  x19, x0, -846  # [li]                         |
+| 0x74 |   0x004EF133 | and   x2, x29, x4  # [alu]                          |
+| 0x78 |   0xE6600413 | addi  x8, x0, -410  # [li]                          |
+| 0x7C |   0x01FDDAB3 | srl   x21, x27, x31  # [alu]                        |
+| 0x80 |   0xE134A023 | sw    x19, -512(x9)  # [store]                      |
+| 0x84 |   0xE1B4A223 | sw    x27, -508(x9)  # [store]                      |
+| 0x88 |   0x008267B3 | or    x15, x4, x8  # [alu]                          |
+| 0x8C |   0xCE84A603 | lw    x12, -792(x9)  # [load]                       |
+| 0x90 |   0x800FAB13 | slti  x22, x31, -2048  # [alu]                      |
+| 0x94 |   0x40DAD593 | srai  x11, x21, 13  # [alu]                         |
+| 0x98 |   0xCE84A283 | lw    x5, -792(x9)  # [load]                        |
+| 0x9C |   0x00000013 | nop                                                 |
+| 0xA0 |   0x00000013 | nop                                                 |
+| 0xA4 |   0x00000013 | nop                                                 |
+| 0xA8 |   0x4014A223 | sw    x1, 1028(x9)  # --- signature: dump registers |
+| 0xAC |   0x4024A423 | sw    x2, 1032(x9)                                  |
+| 0xB0 |   0x4044A823 | sw    x4, 1040(x9)                                  |
+| 0xB4 |   0x4054AA23 | sw    x5, 1044(x9)                                  |
+| 0xB8 |   0x4284A023 | sw    x8, 1056(x9)                                  |
+| 0xBC |   0x4294A223 | sw    x9, 1060(x9)                                  |
+| 0xC0 |   0x42B4A623 | sw    x11, 1068(x9)                                 |
+| 0xC4 |   0x42C4A823 | sw    x12, 1072(x9)                                 |
+| 0xC8 |   0x42D4AA23 | sw    x13, 1076(x9)                                 |
+| 0xCC |   0x42F4AE23 | sw    x15, 1084(x9)                                 |
+| 0xD0 |   0x4534A623 | sw    x19, 1100(x9)                                 |
+| 0xD4 |   0x4554AA23 | sw    x21, 1108(x9)                                 |
+| 0xD8 |   0x4564AC23 | sw    x22, 1112(x9)                                 |
+| 0xDC |   0x47B4A623 | sw    x27, 1132(x9)                                 |
+| 0xE0 |   0x47D4AA23 | sw    x29, 1140(x9)                                 |
+| 0xE4 |   0x47F4AE23 | sw    x31, 1148(x9)                                 |
+| 0xE8 |   0x00000013 | nop                                                 |
+| 0xEC |   0x00000013 | nop                                                 |
+| 0xF0 |   0x00000013 | nop                                                 |
+| 0xF4 |   0x00000013 | nop                                                 |
+| 0xF8 |   0x00000000 | (EOF)                                               |

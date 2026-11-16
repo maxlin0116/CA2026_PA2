@@ -1,0 +1,9 @@
+{
+  "metals.javaHome": "/usr/lib/jvm/java-17-openjdk-amd64",
+  "files.associations": {
+    "*.scala": "scala",
+    "*.vcd": "vcd",
+    "*.hex": "hex"
+  }
+}
+
