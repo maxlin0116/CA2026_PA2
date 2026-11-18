@@ -1,3 +1,4 @@
-[debug] not up to date. inChanged = true, force = false
+[warn] sbt-bloop-2.0.10.jar no longer exists at /tmp/coursier/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/2.0.10/sbt-bloop-2.0.10.jar
+[debug] not up to date. inChanged = false, force = false
 [debug] Updating ProjectRef(uri("file:/home/maxlin0116/CA/CA2026_PA2/project/project/"), "ca2026_pa2-build-build")...
 [debug] Done updating ProjectRef(uri("file:/home/maxlin0116/CA/CA2026_PA2/project/project/"), "ca2026_pa2-build-build")

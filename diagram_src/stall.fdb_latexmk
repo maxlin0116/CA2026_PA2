@@ -1,0 +1,14 @@
+# Fdb version 4
+["xdvipdfmx"] 0 "stall.xdv" "stall.pdf" "stall" 0 -1
+  "stall.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "stall.pdf"
+  (rewritten before read)
+["xelatex"] 0 "/home/maxlin0116/CA/CA2026_PA2/diagram_src/stall.tex" "stall.xdv" "stall" 0 -1
+  "/home/maxlin0116/CA/CA2026_PA2/diagram_src/stall.tex" 0 -1 0 ""
+  "stall.aux" 0 -1 0 "xelatex"
+  (generated)
+  "stall.aux"
+  "stall.log"
+  "stall.xdv"
+  (rewritten before read)

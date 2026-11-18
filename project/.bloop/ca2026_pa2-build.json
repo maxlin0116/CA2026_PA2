@@ -17,7 +17,7 @@
         ],
         "classpath": [
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/sbt/1.8.0/sbt-1.8.0.jar",
-            "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-library.jar",
+            "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-library.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-bloop_2.12_1.0/2.0.10/sbt-bloop-2.0.10.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/main_2.12/1.8.0/main_2.12-1.8.0.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/io_2.12/1.8.0/io_2.12-1.8.0.jar",
@@ -71,12 +71,12 @@
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jna/3.19.0/jline-terminal-jna-3.19.0.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/org/jline/jline-terminal-jansi/3.19.0/jline-terminal-jansi-3.19.0.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar",
-            "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-reflect.jar",
+            "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-reflect.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/org/checkerframework/checker-qual/3.4.1/checker-qual-3.4.1.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/com/google/errorprone/error_prone_annotations/2.4.0/error_prone_annotations-2.4.0.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_2.12/2.8.1/scala-collection-compat_2.12-2.8.1.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.3/slf4j-api-2.0.3.jar",
-            "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-compiler.jar",
+            "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-compiler.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/com/jcraft/jsch/0.1.54/jsch-0.1.54.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/com/eed3si9n/gigahorse-apache-http_2.12/0.7.0/gigahorse-apache-http_2.12-0.7.0.jar",
             "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/ivy/ivy/2.3.0-sbt-a8f9eb5bf09d0539ea3658a2c2d4e09755b5133e/ivy-2.3.0-sbt-a8f9eb5bf09d0539ea3658a2c2d4e09755b5133e.jar",
@@ -121,10 +121,10 @@
                 "-Xsource:3"
             ],
             "jars": [
-                "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-library.jar",
-                "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-reflect.jar",
-                "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-compiler.jar",
-                "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-xml_2.12-2.1.0.jar"
+                "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-library.jar",
+                "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-reflect.jar",
+                "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-compiler.jar",
+                "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-xml_2.12-2.1.0.jar"
             ],
             "setup": {
                 "order": "mixed",
@@ -223,7 +223,7 @@
                 "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/bloop-config_2.12/2.3.2/bloop-config_2.12-2.3.2.jar",
                 "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.jar",
                 "/home/maxlin0116/.cache/coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.jar",
-                "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-library.jar"
+                "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-library.jar"
             ]
         },
         "resolution": {
@@ -304,7 +304,7 @@
                     "artifacts": [
                         {
                             "name": "scala-library",
-                            "path": "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-library.jar"
+                            "path": "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-library.jar"
                         },
                         {
                             "name": "scala-library",
@@ -1171,7 +1171,7 @@
                     "artifacts": [
                         {
                             "name": "scala-reflect",
-                            "path": "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-reflect.jar"
+                            "path": "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-reflect.jar"
                         },
                         {
                             "name": "scala-reflect",
@@ -1256,7 +1256,7 @@
                     "artifacts": [
                         {
                             "name": "scala-compiler",
-                            "path": "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-compiler.jar"
+                            "path": "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-compiler.jar"
                         },
                         {
                             "name": "scala-compiler",
@@ -1715,7 +1715,7 @@
                     "artifacts": [
                         {
                             "name": "scala-compiler",
-                            "path": "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-compiler.jar"
+                            "path": "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-compiler.jar"
                         },
                         {
                             "name": "scala-compiler",
@@ -1732,7 +1732,7 @@
                     "artifacts": [
                         {
                             "name": "scala-library",
-                            "path": "/home/maxlin0116/.sbt/boot/scala-2.12.17/lib/scala-library.jar"
+                            "path": "/tmp/sbt_cache/boot/scala-2.12.17/lib/scala-library.jar"
                         },
                         {
                             "name": "scala-library",

@@ -1,2 +1,2 @@
-[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /home/maxlin0116/CA/CA2026_PA2/target/scala-2.13/test-classes.bak[0m
-[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /home/maxlin0116/CA/CA2026_PA2/target/scala-2.13/test-classes.bak[0m
+[debug] Created transactional ClassFileManager with tempDir = /home/maxlin0116/CA/CA2026_PA2/target/scala-2.13/test-classes.bak
+[debug] Removing the temporary directory used for backing up class files: /home/maxlin0116/CA/CA2026_PA2/target/scala-2.13/test-classes.bak

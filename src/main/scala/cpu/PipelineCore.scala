@@ -105,6 +105,20 @@ class PipelineCore(forwarding: Boolean, hasMul: Boolean) extends Module {
     }
   }
 
+  val wb_data = Wire(UInt(32.W)) // Defined in WB stage
+
+  // WB-to-ID forwarding (handles distance-3 RAW hazard when WB writes and ID reads in the same cycle)
+  val id_rdata1 = WireDefault(regfile.io.data_read1)
+  val id_rdata2 = WireDefault(regfile.io.data_read2)
+  if (forwarding) {
+    when(reg_MEM_WB.valid && reg_MEM_WB.ctrl.ctrlRegWrite && (reg_MEM_WB.rd_addr =/= 0.U) && (reg_MEM_WB.rd_addr === id_rs1)) {
+      id_rdata1 := wb_data
+    }
+    when(reg_MEM_WB.valid && reg_MEM_WB.ctrl.ctrlRegWrite && (reg_MEM_WB.rd_addr =/= 0.U) && (reg_MEM_WB.rd_addr === id_rs2)) {
+      id_rdata2 := wb_data
+    }
+  }
+
   // ID/EX Pipeline Register Update
   when(flush_ID_EX) {
     reg_ID_EX := 0.U.asTypeOf(new ID_EX)
@@ -118,8 +132,8 @@ class PipelineCore(forwarding: Boolean, hasMul: Boolean) extends Module {
       reg_ID_EX.rs1_addr := id_rs1
       reg_ID_EX.rs2_addr := id_rs2
       reg_ID_EX.rd_addr  := decoder.io.reg_addr.rd_addr
-      reg_ID_EX.rdata1   := regfile.io.data_read1
-      reg_ID_EX.rdata2   := regfile.io.data_read2
+      reg_ID_EX.rdata1   := id_rdata1
+      reg_ID_EX.rdata2   := id_rdata2
       reg_ID_EX.imm      := decoder.io.imm
       reg_ID_EX.valid    := true.B
     }
@@ -130,8 +144,6 @@ class PipelineCore(forwarding: Boolean, hasMul: Boolean) extends Module {
   // =========================================================================
   val forward_a = WireDefault(reg_ID_EX.rdata1)
   val forward_b = WireDefault(reg_ID_EX.rdata2)
-
-  val wb_data = Wire(UInt(32.W)) // Defined in WB stage
 
   if (forwarding) {
     // Forwarding to operand A (rs1)
@@ -146,6 +158,12 @@ class PipelineCore(forwarding: Boolean, hasMul: Boolean) extends Module {
       forward_b := Mux(reg_EX_MEM.ctrl.ctrlMemToReg, io.dmem.resp.bits.rdata, reg_EX_MEM.alu_result)
     }.elsewhen(reg_MEM_WB.valid && reg_MEM_WB.ctrl.ctrlRegWrite && (reg_MEM_WB.rd_addr =/= 0.U) && (reg_MEM_WB.rd_addr === reg_ID_EX.rs2_addr)) {
       forward_b := wb_data
+    }
+
+    // When EX is stalled (e.g., by stall_MEM), capture any WB forwarding before reg_MEM_WB is cleared
+    when(!flush_ID_EX && stall_EX) {
+      reg_ID_EX.rdata1 := forward_a
+      reg_ID_EX.rdata2 := forward_b
     }
   }
 
@@ -165,7 +183,7 @@ class PipelineCore(forwarding: Boolean, hasMul: Boolean) extends Module {
   val dmem_req_fired = RegInit(false.B)
   val is_dmem_op = reg_ID_EX.valid && (reg_ID_EX.ctrl.ctrlMemRead || reg_ID_EX.ctrl.ctrlMemWrite)
 
-  io.dmem.req.valid     := is_dmem_op && !dmem_req_fired
+  io.dmem.req.valid     := is_dmem_op && !dmem_req_fired && !stall_MEM
   io.dmem.req.bits.addr := alu.io.alu_result
   io.dmem.req.bits.wdata:= forward_b
   io.dmem.req.bits.wen  := reg_ID_EX.ctrl.ctrlMemWrite
@@ -189,7 +207,7 @@ class PipelineCore(forwarding: Boolean, hasMul: Boolean) extends Module {
     mul.req.valid  := is_mul && !mul_req_fired
     mul.req.bits.a := forward_a
     mul.req.bits.b := forward_b
-    mul.resp.ready := true.B
+    mul.resp.ready := !stall_MEM
 
     when(mul.req.fire) {
       mul_req_fired := true.B

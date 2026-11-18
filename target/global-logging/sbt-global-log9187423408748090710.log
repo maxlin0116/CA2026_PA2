@@ -1,0 +1,140 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.8.0 (Ubuntu Java 17.0.21.0.3)
+[debug] Load.defaultLoad until apply took 82.55243ms
+[debug]                 Load.loadUnit: plugins took 66.301415ms
+[debug]                 Load.loadUnit: defsScala took 0.274129ms
+[debug] [Loading] Scanning directory /home/maxlin0116/CA/CA2026_PA2/project/project
+[debug]                   Load.loadUnit: mkEval took 4.584287ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/maxlin0116/CA/CA2026_PA2/project/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 15.975346 ms
+[info] loading settings for project ca2026_pa2-build-build from metals.sbt ...
+[debug]                     Load.resolveProject(ca2026_pa2-build-build) took 28.011719ms
+[debug]                   Load.loadTransitive: finalizeProject(Project(id ca2026_pa2-build-build, base: /home/maxlin0116/CA/CA2026_PA2/project/project, plugins: List(<none>))) took 55.648271ms
+[debug] [Loading] Done in /home/maxlin0116/CA/CA2026_PA2/project/project, returning: (ca2026_pa2-build-build)
+[debug]                 Load.loadUnit: loadedProjectsRaw took 507.668896ms
+[debug]                 Load.loadUnit: cleanEvalClasses took 7.347395ms
+[debug]               Load.loadUnit(file:/home/maxlin0116/CA/CA2026_PA2/project/project/, ...) took 589.332742ms
+[debug]             Load.apply: load took 701.951647ms
+[debug]             Load.apply: resolveProjects took 3.889991ms
+[debug]             Load.apply: finalTransforms took 52.731139ms
+[debug]             Load.apply: config.delegates took 6.89582ms
+[debug]             Load.apply: Def.make(settings)... took 311.112002ms
+[debug]             Load.apply: structureIndex took 118.569377ms
+[debug]             Load.apply: mkStreams took 1.39613ms
+[info] loading project definition from /home/maxlin0116/CA/CA2026_PA2/project/project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]           Load.loadUnit: plugins took 2369.835299ms
+[debug]           Load.loadUnit: defsScala took 0.004669ms
+[debug] [Loading] Scanning directory /home/maxlin0116/CA/CA2026_PA2/project
+[debug]             Load.loadUnit: mkEval took 0.295282ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in /home/maxlin0116/CA/CA2026_PA2/project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(bloop.integrations.sbt.BloopPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(bloop.integrations.sbt.BloopPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,bloop.integrations.sbt.BloopPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 3.438011 ms
+[info] loading settings for project ca2026_pa2-build from metals.sbt ...
+[debug]               Load.resolveProject(ca2026_pa2-build) took 13.718152ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id ca2026_pa2-build, base: /home/maxlin0116/CA/CA2026_PA2/project, plugins: List(<none>))) took 18.585716ms
+[debug] [Loading] Done in /home/maxlin0116/CA/CA2026_PA2/project, returning: (ca2026_pa2-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 1239.858674ms
+[debug]           Load.loadUnit: cleanEvalClasses took 2.735736ms
+[debug]         Load.loadUnit(file:/home/maxlin0116/CA/CA2026_PA2/project/, ...) took 3613.410917ms
+[debug]       Load.apply: load took 3617.935554ms
+[debug]       Load.apply: resolveProjects took 0.122955ms
+[debug]       Load.apply: finalTransforms took 13.359472ms
+[debug]       Load.apply: config.delegates took 0.404285ms
+[debug]       Load.apply: Def.make(settings)... took 72.296104ms
+[debug]       Load.apply: structureIndex took 22.050827ms
+[debug]       Load.apply: mkStreams took 0.003094ms
+[info] loading project definition from /home/maxlin0116/CA/CA2026_PA2/project
+[debug] Evaluating tasks: bloopInstall
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[error] Couldn't run bloopGenerate. The issue could be caused by failing to compile the project.
+[warn] Removed stale /home/maxlin0116/CA/CA2026_PA2/project/.bloop/ca2026_pa2-build.json
+[error] java.io.IOException: failed to create lock file /home/maxlin0116/.ivy2/.sbt.ivy.lock
+[error] 	at xsbt.boot.Locks$.liftedTree1$1(Locks.scala:43)
+[error] 	at xsbt.boot.Locks$.apply0(Locks.scala:41)
+[error] 	at xsbt.boot.Locks$.apply(Locks.scala:36)
+[error] 	at sbt.internal.librarymanagement.IvySbt.withDefaultLogger(Ivy.scala:82)
+[error] 	at sbt.internal.librarymanagement.IvySbt.withIvy(Ivy.scala:203)
+[error] 	at sbt.internal.librarymanagement.IvySbt.withIvy(Ivy.scala:200)
+[error] 	at sbt.Classpaths$.$anonfun$sbtClassifiersTasks$13(Defaults.scala:3447)
+[error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+[error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)
+[error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:68)
+[error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)
+[error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)
+[error] 	at sbt.Execute.work(Execute.scala:291)
+[error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)
+[error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+[error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[error] 	at java.base/java.lang.Thread.run(Thread.java:840)
+[error] Caused by: java.io.IOException: No such file or directory
+[error] 	at java.base/java.io.UnixFileSystem.createFileExclusively(Native Method)
+[error] 	at java.base/java.io.File.createNewFile(File.java:1043)
+[error] 	at xsbt.boot.Locks$.liftedTree1$1(Locks.scala:41)
+[error] 	at xsbt.boot.Locks$.apply0(Locks.scala:41)
+[error] 	at xsbt.boot.Locks$.apply(Locks.scala:36)
+[error] 	at sbt.internal.librarymanagement.IvySbt.withDefaultLogger(Ivy.scala:82)
+[error] 	at sbt.internal.librarymanagement.IvySbt.withIvy(Ivy.scala:203)
+[error] 	at sbt.internal.librarymanagement.IvySbt.withIvy(Ivy.scala:200)
+[error] 	at sbt.Classpaths$.$anonfun$sbtClassifiersTasks$13(Defaults.scala:3447)
+[error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+[error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:62)
+[error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:68)
+[error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:282)
+[error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:23)
+[error] 	at sbt.Execute.work(Execute.scala:291)
+[error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:282)
+[error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+[error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:64)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+[error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[error] 	at java.base/java.lang.Thread.run(Thread.java:840)
+[error] (updateSbtClassifiers) java.io.IOException: failed to create lock file /home/maxlin0116/.ivy2/.sbt.ivy.lock
+[error] Total time: 1 s, completed Nov 17, 2026, 3:13:33 PM
+[warn] Project loading failed: (r)etry, (q)uit, (l)ast, or (i)gnore? (default: r)

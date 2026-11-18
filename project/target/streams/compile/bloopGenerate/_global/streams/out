@@ -1,4 +1,4 @@
-[0m[[0m[0mdebug[0m] [0m[0m[ca2026_pa2-build] Classpath dependencies List()[0m
-[0m[[0m[0mdebug[0m] [0m[0m[ca2026_pa2-build] Dependencies from configurations List()[0m
-[0m[[0m[0mdebug[0m] [0m[0mBloop wrote the configuration of project 'ca2026_pa2-build' to '/home/maxlin0116/CA/CA2026_PA2/project/.bloop/ca2026_pa2-build.json'[0m
-[0m[[0m[32msuccess[0m] [0m[0mGenerated .bloop/ca2026_pa2-build.json[0m
+[debug] [ca2026_pa2-build] Classpath dependencies List()
+[debug] [ca2026_pa2-build] Dependencies from configurations List()
+[debug] Bloop wrote the configuration of project 'ca2026_pa2-build' to '/home/maxlin0116/CA/CA2026_PA2/project/.bloop/ca2026_pa2-build.json'
+[success] Generated .bloop/ca2026_pa2-build.json
