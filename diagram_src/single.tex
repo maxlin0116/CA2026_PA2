@@ -55,13 +55,13 @@
 
 % Right-side output pins of Decoder (strictly ordered top to bottom so wires never cross!)
 \node[pinR, text=purple!80!black] at (12.8, 6.95) {ctrlJump};
-\node[pinR, text=purple!80!black] at (12.8, 6.40) {ctrlBranch};
-\node[pinR, text=purple!80!black] at (12.8, 5.85) {ctrlMemToReg};
-\node[pinR, text=purple!80!black] at (12.8, 5.30) {ctrlMemWrite};
-\node[pinR, text=purple!80!black] at (12.8, 4.75) {ctrlMemRead};
-\node[pinR, text=purple!80!black] at (12.8, 4.20) {ctrlALUOp};
-\node[pinR, text=purple!80!black] at (12.8, 3.65) {ctrlALUSrc};
-\node[pinR]                       at (12.8, 3.05) {imm};
+\node[pinR, text=purple!80!black] at (12.8, 6.45) {ctrlBranch};
+\node[pinR, text=purple!80!black] at (12.8, 5.75) {ctrlMemToReg};
+\node[pinR, text=purple!80!black] at (12.8, 5.20) {ctrlMemWrite};
+\node[pinR, text=purple!80!black] at (12.8, 4.65) {ctrlMemRead};
+\node[pinR, text=purple!80!black] at (12.8, 4.10) {ctrlALUOp};
+\node[pinR, text=purple!80!black] at (12.8, 3.55) {ctrlALUSrc};
+\node[pinR]                       at (12.8, 2.95) {imm};
 
 % Bottom output pin of Decoder
 \node[pinB, text=purple!80!black] at (10.2, 2.0) {ctrlRegWrite};
@@ -81,14 +81,14 @@
 \node[modtitle] at (12.8, -2.8) {Regfile};
 
 % =========================================================================
-% 5. ALUSrc MUX (x: 15.3 .. 16.6, y: -1.75 .. -0.15)
+% 5. ALUSrc MUX (x: 14.9 .. 16.9, y: -1.75 .. -0.15)
 % =========================================================================
-\draw[box, fill=amber!20] (15.3, -1.75) rectangle (16.6, -0.15);
-\node[pinT, text=purple!80!black] at (15.95, -0.15) {sel};
-\node[pinL] at (15.3, -0.55) {1};
-\node[pinL] at (15.3, -1.05) {0};
-\node[pinR] at (16.6, -0.80) {out};
-\node[font=\scriptsize\bfseries] at (15.95, -1.52) {MUX};
+\draw[box, fill=amber!20] (14.9, -1.75) rectangle (16.9, -0.15);
+\node[pinT, text=purple!80!black] at (15.90, -0.15) {ctrlALUSrc};
+\node[pinL] at (14.9, -0.55) {1};
+\node[pinL] at (14.9, -1.05) {0};
+\node[pinR] at (16.9, -0.80) {out};
+\node[font=\scriptsize\bfseries] at (15.90, -1.52) {MUX};
 
 % =========================================================================
 % 6. Alu (x: 18.0 .. 22.0, y: -1.4 .. 3.4)
@@ -105,13 +105,14 @@
 \node[modtitle] at (22.0, -1.4) {Alu};
 
 % =========================================================================
-% 7. Branch / Jump Gate (x: 18.8 .. 22.9, y: 6.0 .. 7.45)
+% 7. Branch / Jump Gate (x: 18.8 .. 23.0, y: 6.10 .. 7.45)
 % =========================================================================
-\draw[box, fill=purple!7, draw=purple!80!black] (18.8, 6.0) rectangle (22.9, 7.45);
+\draw[box, fill=purple!7, draw=purple!80!black] (18.8, 6.10) rectangle (23.0, 7.45);
 \node[pinL, text=purple!80!black] at (18.8, 6.95) {ctrlJump};
-\node[pinL, text=purple!80!black] at (18.8, 6.40) {ctrlBranch};
-\node[pinB, text=purple!80!black] at (22.2, 6.55)  {to\_branch};
-\node[pinT, text=red!75!black]    at (20.8, 7.45) {jump\_flag};
+\node[pinL, text=purple!80!black] at (18.8, 6.45) {ctrlBranch};
+\node[pinR, text=purple!80!black] at (23.0, 6.75) {to\_branch};
+\node[pinT, text=red!75!black]    at (20.9, 7.45) {jump\_flag};
+\node[font=\tiny\bfseries, text=purple!80!black, anchor=south east, inner sep=2.5pt] at (23.0, 6.10) {Branch/Jump};
 
 % =========================================================================
 % 8. DataMemComb (x: 24.6 .. 28.6, y: -1.4 .. 2.8)
@@ -125,73 +126,73 @@
 \node[modtitle] at (28.6, -1.4) {DataMemComb};
 
 % =========================================================================
-% 9. MemToReg MUX (x: 30.4 .. 31.7, y: -0.6 .. 1.2)
+% 9. MemToReg MUX (x: 30.0 .. 32.2, y: -0.75 .. 1.2)
 % =========================================================================
-\draw[box, fill=amber!20] (30.4, -0.6) rectangle (31.7, 1.2);
-\node[pinT, text=purple!80!black] at (31.05, 1.2) {sel};
-\node[pinL]                       at (30.4, 0.45) {1};
-\node[pinL]                       at (30.4, -0.25){0};
-\node[pinR, text=blue!75!black]   at (31.7, 0.10) {out};
-\node[font=\scriptsize\bfseries] at (31.05, -0.38) {MUX};
+\draw[box, fill=amber!20] (30.0, -0.75) rectangle (32.2, 1.2);
+\node[pinT, text=purple!80!black] at (31.10, 1.2) {ctrlMemToReg};
+\node[pinL]                       at (30.0, 0.45) {1};
+\node[pinL]                       at (30.0, -0.25){0};
+\node[pinR, text=blue!75!black]   at (32.2, 0.10) {wb\_data};
+\node[font=\scriptsize\bfseries] at (31.10, -0.52) {WB MUX};
 
 % =========================================================================
-% WIRES & CONNECTIONS (All T-junctions have explicit black dots!)
+% WIRES & CONNECTIONS (All T-junctions have explicit dots!)
 % =========================================================================
 % 1. PC -> InstMemComb & Alu
 \draw[wire] (2.2, 1.7) -- (3.6, 1.7);
 \node[dot] at (2.9, 1.7) {};
 \draw[wire] (2.9, 1.7) -- (2.9, 7.75) -- (17.1, 7.75) |- (18.0, 2.35);
 
-% 2. InstMemComb -> Decoder & Regfile (with all 3 T-junction black dots!)
-\draw[wire] (6.8, 1.7) -- (7.5, 1.7) |- (8.4, 4.7);
-\node[dot] at (7.5, 1.7) {};
-\draw[wire] (7.5, 1.7) -- (7.5, -1.05) -- (8.4, -1.05);
-\node[dot] at (7.5, 0.15) {};
-\draw[wire] (7.5, 0.15) -- (8.4, 0.15);
-\node[dot] at (7.5, -0.45) {};
-\draw[wire] (7.5, -0.45) -- (8.4, -0.45);
+% 2. InstMemComb -> Decoder & Regfile (with bit-slice labels & T-junction dots!)
+\draw[wire] (6.8, 1.7) -- (7.25, 1.7) |- (8.4, 4.7);
+\node[dot] at (7.25, 1.7) {};
+\draw[wire] (7.25, 1.7) -- (7.25, -1.05) -- node[lbl, above, pos=0.45]{\tiny\texttt{[11:7]}} (8.4, -1.05);
+\node[dot] at (7.25, 0.15) {};
+\draw[wire] (7.25, 0.15) -- node[lbl, above, pos=0.45]{\tiny\texttt{[19:15]}} (8.4, 0.15);
+\node[dot] at (7.25, -0.45) {};
+\draw[wire] (7.25, -0.45) -- node[lbl, above, pos=0.45]{\tiny\texttt{[24:20]}} (8.4, -0.45);
 
 % 3. Decoder -> Regfile (ctrlRegWrite)
 \draw[cwire] (10.2, 2.0) -- (10.2, 0.9);
 
 % 4. Decoder -> Control Signals
 \draw[cwire] (12.8, 6.95) -- (18.8, 6.95);
-\draw[cwire] (12.8, 6.40) -- (18.8, 6.40);
-\draw[cwire] (12.8, 5.85) -| (31.05, 1.2);
-\draw[cwire] (12.8, 5.30) -| (27.5, 2.8);
-\draw[cwire] (12.8, 4.75) -| (25.7, 2.8);
-\draw[cwire] (12.8, 4.20) -| (19.6, 3.4);
-\draw[cwire] (12.8, 3.65) -| (15.95, -0.15);
+\draw[cwire] (12.8, 6.45) -- (18.8, 6.45);
+\draw[cwire] (12.8, 5.75) -| (31.10, 1.2);
+\draw[cwire] (12.8, 5.20) -| (27.5, 2.8);
+\draw[cwire] (12.8, 4.65) -| (25.7, 2.8);
+\draw[cwire] (12.8, 4.10) -| (19.6, 3.4);
+\draw[cwire] (12.8, 3.55) -| (15.90, -0.15);
 
 % 5. Decoder -> imm (to Alu and ALUSrc MUX, with T-junction black dot!)
-\draw[wire] (12.8, 3.05) -- (14.4, 3.05) |- (15.3, -0.55);
-\node[dot] at (14.4, 1.25) {};
-\draw[wire] (14.4, 1.25) -- (18.0, 1.25);
+\draw[wire] (12.8, 2.95) -- (14.2, 2.95) |- (14.9, -0.55);
+\node[dot] at (14.2, 1.25) {};
+\draw[wire] (14.2, 1.25) -- (18.0, 1.25);
 
 % 6. Regfile -> Alu, ALUSrc MUX, DataMemComb (with T-junction black dot!)
 \draw[wire] (12.8, 0.15) -- (18.0, 0.15);
-\draw[wire] (12.8, -1.05) -- (15.3, -1.05);
-\node[dot] at (13.7, -1.05) {};
-\draw[wire] (13.7, -1.05) -- (13.7, -2.3) -- (23.3, -2.3) |- (24.6, -0.55);
+\draw[wire] (12.8, -1.05) -- (14.9, -1.05);
+\node[dot] at (13.6, -1.05) {};
+\draw[wire] (13.6, -1.05) -- (13.6, -2.3) -- (23.3, -2.3) |- (24.6, -0.55);
 
 % 7. ALUSrc MUX -> Alu.src_b
-\draw[wire] (16.6, -0.80) -- (18.0, -0.80);
+\draw[wire] (16.9, -0.80) -- (18.0, -0.80);
 
 % 8. Alu -> Branch Gate, DataMemComb, MemToReg MUX (with T-junction black dot!)
-\draw[cwire] (22.0, 1.65) -- (24.0, 1.65) -- (24.0, 6.70) -- (22.9, 6.70);
+\draw[cwire] (22.0, 1.65) -- (24.0, 1.65) -- (24.0, 6.75) -- (23.0, 6.75);
 \draw[wire] (22.0, 0.45) -- (24.6, 0.45);
 \node[dot] at (23.9, 0.45) {};
-\draw[wire] (23.9, 0.45) -- (23.9, -1.85) -- (29.5, -1.85) |- (30.4, -0.25);
+\draw[wire] (23.9, 0.45) -- (23.9, -1.85) -- (29.3, -1.85) |- (30.0, -0.25);
 
 % 9. DataMemComb -> MemToReg MUX
-\draw[wire] (28.6, 0.45) -- (30.4, 0.45);
+\draw[wire] (28.6, 0.45) -- (30.0, 0.45);
 
 % 10. Branch Gate & Alu.jump_addr -> PCHandle (Red)
-\draw[bwire] (20.8, 7.45) -- (20.8, 8.4) -- (-1.8, 8.4) |- (-1.0, 2.6);
+\draw[bwire] (20.9, 7.45) -- (20.9, 8.4) -- (-1.8, 8.4) |- (-1.0, 2.6);
 \draw[bwire] (22.0, 2.55) -- (23.6, 2.55) -- (23.6, 8.05) -- (-2.2, 8.05) |- (-1.0, 1.7);
 
 % 11. MemToReg MUX -> Regfile.data_write (Blue Writeback)
-\draw[wbwire] (31.7, 0.10) -- (32.5, 0.10) -- (32.5, -3.4) -- (7.5, -3.4) |- (8.4, -1.85);
+\draw[wbwire] (32.2, 0.10) -- (32.9, 0.10) -- (32.9, -3.4) -- (7.25, -3.4) |- (8.4, -1.85);
 
 \end{tikzpicture}
 \end{document}

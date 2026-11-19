@@ -204,9 +204,9 @@
 % =========================================================================
 % 3. EX STAGE
 % =========================================================================
-% FwdA MUX (x: 40.2 .. 42.0, y: -0.45 .. 0.65)
-\draw[box, fill=green!16, draw=green!55!black] (40.2, -0.45) rectangle (42.0, 0.65);
-\node[font=\tiny\bfseries, text=green!45!black, anchor=north east, inner sep=2.5pt] at (42.0, 0.65) {FwdA};
+% FwdA MUX (x: 40.2 .. 42.0, y: -0.45 .. 0.60)
+\draw[box, fill=green!16, draw=green!55!black] (40.2, -0.45) rectangle (42.0, 0.60);
+\node[font=\tiny\bfseries, text=green!45!black, anchor=north east, inner sep=2.5pt] at (42.0, 0.60) {FwdA};
 \node[pinL]                       at (40.2,  0.42) {0};
 \node[pinL, text=blue!75!black]   at (40.2,  0.10) {1};
 \node[pinL, text=green!55!black]  at (40.2, -0.22) {2};
@@ -222,13 +222,13 @@
 \node[pinB, text=green!55!black]  at (41.10, -3.05) {fwd\_b};
 \node[pinR]                       at (42.0, -2.20) {forward\_b};
 
-% ALUSrc MUX (x: 48.8 .. 50.8, y: -1.20 .. 0.20 -> generous clearance for ctrlALUSrc!)
-\draw[box, fill=amber!20] (48.8, -1.20) rectangle (50.8, 0.20);
-\node[pinT, text=purple!80!black] at (49.80, 0.20) {ctrlALUSrc};
-\node[pinL] at (48.8, -0.32) {1};
+% ALUSrc MUX (x: 48.8 .. 50.8, y: -1.30 .. 0.00 -> 0.25 cm clear below src_a wire at y=0.25!)
+\draw[box, fill=amber!20] (48.8, -1.30) rectangle (50.8, 0.00);
+\node[pinT, text=purple!80!black] at (49.80, 0.00) {ctrlALUSrc};
+\node[pinL] at (48.8, -0.40) {1};
 \node[pinL] at (48.8, -0.82) {0};
 \node[pinR] at (50.8, -0.55) {out};
-\node[font=\scriptsize\bfseries] at (49.80, -1.04) {MUX};
+\node[font=\scriptsize\bfseries] at (49.80, -1.12) {MUX};
 
 % Alu (x: 54.0 .. 57.8, y: -0.80 .. 1.80)
 \draw[box, fill=blue!10] (54.0, -0.80) rectangle (57.8, 1.80);
@@ -250,6 +250,7 @@
 \node[pinT, text=red!75!black]    at (60.10, 3.35) {jump\_flag};
 \node[pinT, text=black!85]        at (61.40, 3.35) {valid};
 \node[pinR, text=orange!80!black] at (62.5, 2.70) {!stall\_MEM};
+\node[font=\tiny\bfseries, text=purple!80!black, anchor=south east, inner sep=2.5pt] at (62.5, 2.05) {Br/Jmp};
 
 % MulUnit (x: 54.0 .. 57.8, y: -2.85 .. -1.00)
 \draw[box, fill=violet!10] (54.0, -2.85) rectangle (57.8, -1.00);
@@ -353,10 +354,11 @@
 % =========================================================================
 % 5. WB STAGE (Shifted to 95.8 .. 98.1 for wide 4.2 cm MEM_WB->WB corridor!)
 % =========================================================================
-\draw[box, fill=purple!7, draw=purple!80!black] (95.8, 4.55) rectangle (98.1, 5.60);
+\draw[box, fill=purple!7, draw=purple!80!black] (95.8, 4.74) rectangle (98.1, 5.72);
 \node[pinL]                       at (95.8, 5.30) {valid};
 \node[pinL, text=purple!80!black] at (95.8, 4.92) {ctrlRegWrite};
 \node[pinR, text=blue!75!black]   at (98.1, 5.10) {reg\_we};
+\node[font=\tiny\bfseries, text=purple!80!black, anchor=north east, inner sep=2.5pt] at (98.1, 5.72) {AND};
 
 \draw[box, fill=amber!20] (95.8, -1.55) rectangle (98.1, 0.45);
 \node[pinT, text=purple!80!black] at (96.95, 0.45) {ctrlMemToReg};
@@ -477,12 +479,12 @@
 \draw[cwire] (33.2, 2.95) -- (58.2, 2.95);
 \draw[cwire] (33.2, 2.50) -- (58.2, 2.50);
 \draw[cwire] (33.2, 2.10) -| (55.90, 1.80);
-\draw[cwire] (33.2, 1.65) -| (49.80, 0.20);
+\draw[cwire] (33.2, 1.65) -| (49.80, 0.00);
 
 \draw[wire] (33.2, 1.25) -- (54.0, 1.25);
 \draw[wire] (33.2, 0.80) -- (54.0, 0.80);
 \node[dot] at (48.35, 0.80) {};
-\draw[wire] (48.35, 0.80) |- (48.8, -0.32);
+\draw[wire] (48.35, 0.80) |- (48.8, -0.40);
 
 \draw[wire] (33.2,  0.42) -- (40.2,  0.42);
 \draw[wire] (33.2, -1.87) -- (40.2, -1.87);
@@ -627,6 +629,7 @@
 
 % stall_MEM (x=74.2 -> upper track y=6.90 -> EX_MEM.stall_MEM 71.20, MEM_WB.bubble 89.70, & EX !stall_MEM at x=66.60)
 \draw[swire] (74.2, 7.45) -- (74.2, 6.90) -- (89.70, 6.90) -- (89.70, 5.85);
+\node[dot, fill=orange!85!black] at (74.2, 6.90) {};
 \node[dot, fill=orange!85!black] at (71.20, 6.90) {};
 \draw[swire] (71.20, 6.90) -- (71.20, 5.85);
 \draw[swire] (74.2, 6.90) -- (66.60, 6.90) -- (66.60, 2.70) -- (62.5, 2.70);
