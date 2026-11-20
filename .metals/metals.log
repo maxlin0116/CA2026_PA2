@@ -6715,3 +6715,167 @@ Nov 18, 2026 8:56:55 AM scala.meta.internal.pc.CompilerAccess retryWithCleanComp
 INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
 Nov 18, 2026 8:56:55 AM scala.meta.internal.pc.CompilerAccess handleError
 SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/maxlin0116/CA/CA2026_PA2/.metals/.reports/metals-full/2026-11-18/r_compiler-error_(root)_08-56-55-517.md
+2026.11.20 10:46:48 INFO  Started: Metals version 1.6.9 in folders '/home/maxlin0116/CA, /home/maxlin0116/CA/CA2026_PA2' for client Visual Studio Code 1.146.0.[0m
+2026.11.20 10:46:49 INFO  Memory monitor started[0m
+2026.11.20 10:46:50 INFO  Database: jdbc:h2:file:/home/maxlin0116/CA/CA2026_PA2/.metals/metals (H2 2.5)[0m
+2026.11.20 10:46:50 INFO  Database: jdbc:h2:file:/home/maxlin0116/CA/.metals/metals (H2 2.5)[0m
+2026.11.20 10:46:50 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.[0m
+2026.11.20 10:46:50 WARN  Using H2 2.5.250 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.[0m
+2026.11.20 10:46:50 INFO  Successfully validated 7 migrations (execution time 00:00.038s)[0m
+2026.11.20 10:46:50 INFO  Successfully validated 7 migrations (execution time 00:00.038s)[0m
+2026.11.20 10:46:50 INFO  Current version of schema "PUBLIC": 7[0m
+2026.11.20 10:46:50 INFO  Current version of schema "PUBLIC": 7[0m
+2026.11.20 10:46:50 INFO  Schema "PUBLIC" is up to date. No migration necessary.[0m
+2026.11.20 10:46:50 INFO  Schema "PUBLIC" is up to date. No migration necessary.[0m
+2026.11.20 10:46:50 INFO  Attempting to connect to the build server...[0m
+2026.11.20 10:46:50 INFO  Attempting to connect to the build server...[0m
+2026.11.20 10:46:50 INFO  No running Bloop server found, starting one.[0m
+2026.11.20 10:46:50 INFO  No running Bloop server found, starting one.[0m
+2026.11.20 10:46:50 ERROR Running process '/usr/lib/jvm/java-21-openjdk-amd64/bin/jps -l' failed
+java.io.IOException: Cannot run program "/usr/lib/jvm/java-21-openjdk-amd64/bin/jps" (in directory "/home/maxlin0116/.local/share/scalacli/bloop"): Exec failed, error: 2 (No such file or directory) 
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at scala.meta.internal.process.SystemProcess$.run(SystemProcess.scala:48)
+	at scala.meta.internal.builds.ShellRunner$.runSync(ShellRunner.scala:153)
+	at scala.meta.internal.metals.BloopServers.$anonfun$checkOldBloopRunning$1(BloopServers.scala:268)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.BloopServers.checkOldBloopRunning(BloopServers.scala:266)
+	at scala.meta.internal.metals.BloopServers.connect(BloopServers.scala:401)
+	at scala.meta.internal.metals.BloopServers.$anonfun$newServer$1(BloopServers.scala:104)
+	at scala.meta.internal.metals.BuildServerConnection$.setupServer$1(BuildServerConnection.scala:631)
+	at scala.meta.internal.metals.BuildServerConnection$.fromSockets(BuildServerConnection.scala:700)
+	at scala.meta.internal.metals.BloopServers.newServer(BloopServers.scala:96)
+	at scala.meta.internal.bsp.BspConnector.connect$1(BspConnector.scala:137)
+	at scala.meta.internal.bsp.BspConnector.connect(BspConnector.scala:260)
+	at scala.meta.internal.metals.ConnectionProvider$Connect$.$anonfun$createSession$7(ConnectionProvider.scala:586)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:503)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.IOException: Exec failed, error: 2 (No such file or directory) 
+	at java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:295)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:225)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at scala.meta.internal.process.SystemProcess$.run(SystemProcess.scala:48)
+	at scala.meta.internal.builds.ShellRunner$.runSync(ShellRunner.scala:153)
+	at scala.meta.internal.metals.BloopServers.$anonfun$checkOldBloopRunning$1(BloopServers.scala:268)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.BloopServers.checkOldBloopRunning(BloopServers.scala:266)
+	at scala.meta.internal.metals.BloopServers.connect(BloopServers.scala:401)
+	at scala.meta.internal.metals.BloopServers.$anonfun$newServer$1(BloopServers.scala:104)
+	at scala.meta.internal.metals.BuildServerConnection$.setupServer$1(BuildServerConnection.scala:631)
+	at scala.meta.internal.metals.BuildServerConnection$.fromSockets(BuildServerConnection.scala:700)
+	at scala.meta.internal.metals.BloopServers.newServer(BloopServers.scala:96)
+	at scala.meta.internal.bsp.BspConnector.connect$1(BspConnector.scala:137)
+	at scala.meta.internal.bsp.BspConnector.connect(BspConnector.scala:260)
+	at scala.meta.internal.metals.ConnectionProvider$Connect$.$anonfun$createSession$7(ConnectionProvider.scala:586)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:503)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+[0m
+2026.11.20 10:46:50 ERROR Running process '/usr/lib/jvm/java-21-openjdk-amd64/bin/jps -l' failed
+java.io.IOException: Cannot run program "/usr/lib/jvm/java-21-openjdk-amd64/bin/jps" (in directory "/home/maxlin0116/.local/share/scalacli/bloop"): Exec failed, error: 2 (No such file or directory) 
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at scala.meta.internal.process.SystemProcess$.run(SystemProcess.scala:48)
+	at scala.meta.internal.builds.ShellRunner$.runSync(ShellRunner.scala:153)
+	at scala.meta.internal.metals.BloopServers.$anonfun$checkOldBloopRunning$1(BloopServers.scala:268)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.BloopServers.checkOldBloopRunning(BloopServers.scala:266)
+	at scala.meta.internal.metals.BloopServers.connect(BloopServers.scala:401)
+	at scala.meta.internal.metals.BloopServers.$anonfun$newServer$1(BloopServers.scala:104)
+	at scala.meta.internal.metals.BuildServerConnection$.setupServer$1(BuildServerConnection.scala:631)
+	at scala.meta.internal.metals.BuildServerConnection$.fromSockets(BuildServerConnection.scala:700)
+	at scala.meta.internal.metals.BloopServers.newServer(BloopServers.scala:96)
+	at scala.meta.internal.bsp.BspConnector.connect$1(BspConnector.scala:137)
+	at scala.meta.internal.bsp.BspConnector.connect(BspConnector.scala:260)
+	at scala.meta.internal.metals.ConnectionProvider$Connect$.$anonfun$createSession$7(ConnectionProvider.scala:586)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:503)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.IOException: Exec failed, error: 2 (No such file or directory) 
+	at java.lang.ProcessImpl.forkAndExec(Native Method)
+	at java.lang.ProcessImpl.<init>(ProcessImpl.java:295)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:225)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at scala.meta.internal.process.SystemProcess$.run(SystemProcess.scala:48)
+	at scala.meta.internal.builds.ShellRunner$.runSync(ShellRunner.scala:153)
+	at scala.meta.internal.metals.BloopServers.$anonfun$checkOldBloopRunning$1(BloopServers.scala:268)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.BloopServers.checkOldBloopRunning(BloopServers.scala:266)
+	at scala.meta.internal.metals.BloopServers.connect(BloopServers.scala:401)
+	at scala.meta.internal.metals.BloopServers.$anonfun$newServer$1(BloopServers.scala:104)
+	at scala.meta.internal.metals.BuildServerConnection$.setupServer$1(BuildServerConnection.scala:631)
+	at scala.meta.internal.metals.BuildServerConnection$.fromSockets(BuildServerConnection.scala:700)
+	at scala.meta.internal.metals.BloopServers.newServer(BloopServers.scala:96)
+	at scala.meta.internal.bsp.BspConnector.connect$1(BspConnector.scala:137)
+	at scala.meta.internal.bsp.BspConnector.connect(BspConnector.scala:260)
+	at scala.meta.internal.metals.ConnectionProvider$Connect$.$anonfun$createSession$7(ConnectionProvider.scala:586)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:503)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.lang.Thread.run(Thread.java:1583)
+[0m
+2026.11.20 10:46:52 INFO  Starting compilation server[0m
+2026.11.20 10:46:52 INFO  Starting compilation server[0m
+2026.11.20 10:46:54 INFO  Tracing is disabled for protocol BSP. To enable tracing of incoming and outgoing JSON messages, create an empty file at /home/maxlin0116/CA/CA2026_PA2/.metals/bsp.trace.json or /home/maxlin0116/.cache/metals/bsp.trace.json[0m
+2026.11.20 10:46:54 INFO  Tracing is disabled for protocol BSP. To enable tracing of incoming and outgoing JSON messages, create an empty file at /home/maxlin0116/CA/.metals/bsp.trace.json or /home/maxlin0116/.cache/metals/bsp.trace.json[0m
+2026.11.20 10:46:58 INFO  Attempting to connect to the build server...[0m
+2026.11.20 10:46:58 INFO  time: Connected to build server in 7.32s[0m
+2026.11.20 10:46:58 INFO  Found a Bloop server running[0m
+2026.11.20 10:46:58 INFO  Connected to Build server: Bloop v2.1.2[0m
+2026.11.20 10:46:58 INFO  Tracing is disabled for protocol BSP. To enable tracing of incoming and outgoing JSON messages, create an empty file at /home/maxlin0116/CA/CA2026_PA2/project/.metals/bsp.trace.json or /home/maxlin0116/.cache/metals/bsp.trace.json[0m
+2026.11.20 10:46:58 ERROR Scala instance jar /tmp/sbt_cache/boot/scala-2.12.17/lib/scala-library.jar doesn't exist![0m
+2026.11.20 10:46:58 ERROR Scala instance jar /tmp/sbt_cache/boot/scala-2.12.17/lib/scala-reflect.jar doesn't exist![0m
+2026.11.20 10:46:58 ERROR Scala instance jar /tmp/sbt_cache/boot/scala-2.12.17/lib/scala-compiler.jar doesn't exist![0m
+2026.11.20 10:46:58 ERROR Scala instance jar /tmp/sbt_cache/boot/scala-2.12.17/lib/scala-xml_2.12-2.1.0.jar doesn't exist![0m
+2026.11.20 10:46:58 INFO  time: Imported build in 0.15s[0m
+2026.11.20 10:46:58 WARN  2.13.8 is no longer supported in the current Metals versions, using the last known supported version 1.3.3[0m
+2026.11.20 10:46:59 INFO  time: Connected to build server in 9.06s[0m
+2026.11.20 10:46:59 INFO  Connected to Build server: Bloop v2.1.2[0m
+2026.11.20 10:47:00 INFO  time: Imported build in 0.11s[0m
+2026.11.20 10:46:59 WARN  2.12.17 is no longer supported in the current Metals versions, using the last known supported version 1.6.4[0m
+2026.11.20 10:47:01 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-21-openjdk-amd64/src.zip, /usr/lib/jvm/java-21-openjdk-amd64/lib/src.zip. Java symbols will not be available.[0m
+2026.11.20 10:47:01 INFO  time: indexed workspace in 3.47s[0m
+2026.11.20 10:47:02 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/src.zip, /usr/lib/jvm/java-17-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-21-openjdk-amd64/src.zip, /usr/lib/jvm/java-21-openjdk-amd64/lib/src.zip. Java symbols will not be available.[0m
+2026.11.20 10:47:02 INFO  time: indexed workspace in 3.3s[0m
+Nov 20, 2026 6:03:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2026.11.20 18:03:08 INFO  compiling root (12 scala sources)[0m
+2026.11.20 18:03:10 INFO  Non-compiled module 'compiler-bridge_2.13' for Scala 2.13.8. Compiling...[0m
+Nov 20, 2026 6:03:11 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Nov 20, 2026 6:03:11 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/maxlin0116/CA/CA2026_PA2/.metals/.reports/metals-full/2026-11-20/r_compiler-error_(root)_18-03-11-231.md
+Nov 20, 2026 6:03:11 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Nov 20, 2026 6:03:11 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/maxlin0116/CA/CA2026_PA2/.metals/.reports/metals-full/2026-11-20/r_compiler-error_(root)_18-03-11-318.md
+2026.11.20 18:03:11 WARN  Could not find semantic tokens for: file:///home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/PipelineCore.scala[0m
+2026.11.20 18:03:12 INFO  time: compiled root in 2.12s[0m
+Nov 20, 2026 6:03:12 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Nov 20, 2026 6:03:12 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/maxlin0116/CA/CA2026_PA2/.metals/.reports/metals-full/2026-11-20/r_compiler-error_(root)_18-03-12-129.md
+2026.11.20 18:03:12 WARN  Could not find semantic tokens for: file:///home/maxlin0116/CA/CA2026_PA2/src/main/scala/cpu/PipelineCore.scala[0m
+Nov 20, 2026 6:03:12 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Nov 20, 2026 6:03:12 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/maxlin0116/CA/CA2026_PA2/.metals/.reports/metals-full/2026-11-20/r_compiler-error_(root)_18-03-12-903.md
+Nov 20, 2026 6:03:13 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Nov 20, 2026 6:03:13 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/maxlin0116/CA/CA2026_PA2/.metals/.reports/metals-full/2026-11-20/r_compiler-error_(root)_18-03-13-113.md
+Nov 20, 2026 6:03:13 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Nov 20, 2026 6:03:13 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/maxlin0116/CA/CA2026_PA2/.metals/.reports/metals-full/2026-11-20/r_compiler-error_(root)_18-03-13-243.md
+Nov 20, 2026 6:03:13 PM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Nov 20, 2026 6:03:13 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/maxlin0116/CA/CA2026_PA2/.metals/.reports/metals-full/2026-11-20/r_compiler-error_(root)_18-03-13-533.md
